@@ -31,7 +31,7 @@ namespace friends_db_service
             //Inject SQLServer depencency for SelfPay 
             services.AddDbContext<FriendsdatadbContext>(options =>
                         options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
             //Important for maintaining upper/lower case letters while Serializing Property Names in JSON 
             .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
